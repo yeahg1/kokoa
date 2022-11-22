@@ -1,24 +1,50 @@
-.status-bar {
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap");
+
+@import "reset.css";
+@import "variables.css";
+
+/*.components.*/
+@import "components/status-bar.css";
+@import "components/nav-bar.css";
+@import "components/screen-header.css";
+@import "components/alt-screen-header.css";
+@import "components/user-component.css";
+@import "components/badge.css";
+@import "components/icon-row.css";
+@import "components/no-mobile.css";
+
+/*.screens.*/
+@import "screens/login.css";
+@import "screens/friends.css";
+@import "screens/find.css";
+@import "screens/more.css";
+@import "screens/settings.css";
+@import "screens/chat.css";
+
+body {
+    color: #2e363e;
+    font-family: 'Gowun Dodum', sans-serif;
+} 
+
+.main-screen {
+    padding: 0px var(--horizontal-space);
+  }
+
+.welcome-header {
+    margin: 90px 0px;
+    text-align: center;
     display: flex;
-    justify-content: center;
-    padding: 5px 3px;
-  }
-  .status-bar__column {
-    width: 33%;
-  }
-  .status-bar__column:first-child span {
-    margin-right: 5px;
-  }
-  .status-bar__column:nth-child(2) {
-    display: flex;
-    justify-content: center;
-  }
-  .status-bar__column:last-child {
-    display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
     align-items: center;
-  }
-  
-  .status-bar__column .fa-battery-full {
-    margin: 0px 5px;
-  }
+    font-weight: 600;
+}
+.welcome-header__title{
+    margin-bottom: 30px;
+    font-size: 25px;
+}
+.welcome-header__text{
+    margin-bottom: 10px;
+    width: 60%;
+    font-size: 15px;
+    opacity: 0.7;
+}
